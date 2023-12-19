@@ -30,14 +30,14 @@ public class SecurityConfig {
     }
 
     @Bean
-    public AuthenticationManager authenticationManager(com.example.CustomUserDetailsService customUserDetailsService) {
+    public AuthenticationManager authenticationManager(CustomUserDetailsService customUserDetailsService) {
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
         daoAuthenticationProvider.setUserDetailsService(customUserDetailsService);
         return new ProviderManager(daoAuthenticationProvider);
     }
 
     @Bean
-    com.example.CustomUserDetailsService customUserDetailsService(UserRepository userRepository) {
+    CustomUserDetailsService customUserDetailsService(UserRepository userRepository) {
         return  new CustomUserDetailsService(userRepository);
     }
 

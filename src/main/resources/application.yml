@@ -1,6 +1,2 @@
-spring:
-  datasource:
-    url: ${DB_URL}
-    username: admin01
-    password: ${DB_PASSWORD}
+
 
