@@ -20,4 +20,15 @@ public class AdminController {
         return ResponseEntity.ok(null);
     }
 
+    @GetMapping("/test2")
+    public ResponseEntity<Void> get2(@RequestPart User user) {
+        return ResponseEntity.ok(null);
+    }
+
+    @PostMapping("/test2")
+    public ResponseEntity<Void> post2(@RequestPart User user) {
+        return ResponseEntity.ok(null);
+    }
+
+
 }
